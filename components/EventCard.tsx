@@ -31,19 +31,19 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
 
       {/* Event Details */}
       <div className="mt-4">
-        <h2 className="text-xl font-bold">{event.name}</h2>
-        <p className="text-gray-600">{event.category}</p>
+        <h2 className="text-xl font-bold text-accent">{event.name}</h2>
+        <p className=" text-primary">{event.category}</p>
         <p className="text-gray-800">
-          <strong>Date:</strong> {event.date}
+          <strong className="text-accent">Date:</strong> {event.date}
         </p>
         <p className="text-gray-800">
-          <strong>Time:</strong> {event.time}
+          <strong className="text-accent">Time:</strong> {event.time}
         </p>
         <p className="text-gray-800">
-          <strong>Location:</strong> {event.location}
+          <strong className="text-accent">Location:</strong> {event.location}
         </p>
         <p className="text-gray-800">
-          <strong>Price:</strong> {event.price}
+          <strong className="text-accent">Price:</strong> {event.price}
         </p>
 
         {/* Availability */}
@@ -54,7 +54,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
         )}
 
         {/* Description */}
-        <p className="text-gray-600 mt-4 line-clamp-2">{event.description}</p>
+        <p className="text-accent my-2 line-clamp-2">{event.description}</p>
 
         {/* Reserve Button */}
         <div className="flex justify-between ">
@@ -69,7 +69,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
           {event.tickets_available ? "Reserve Tickets" : "Unavailable"}
         </button> */}
          
-         <Link href={`event/${event.id}`}>
+         <Link className=" text-primary px-4 py-2 bg-accent rounded-md hover:bg-[#2f476a]" href={`event/${event.id}`}>
           View Details
          </Link>
 

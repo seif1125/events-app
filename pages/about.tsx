@@ -13,21 +13,24 @@ const About: React.FC<AboutProps> = ({ companyInfo }) => {
   const { name, description, mission, vision } = companyInfo;
 
   return (
-    <div className="container mx-auto mt-8">
-      <h1 className="text-3xl font-bold">About Us</h1>
-      <section className="mt-6">
-        <h2 className="text-2xl font-semibold">{name}</h2>
-        <p className="mt-4">{description}</p>
+    <div className="bg-[url('/background.webp')] bg-fixed bg-cover bg-center bg-no-repeat w-screen h-screen block ">
+      <div className="container  mx-auto flex flex-col justify-center bg-[#1f293742] h-full  p-8 ">
+      <h1 className="text-3xl font-bold bg-accent p-2 text-primary">About Us</h1>
+      <section className="mt-6 bg-accent bg-opacity-80 rounded-md p-2">
+        <h2 className="text-2xl font-semibold text-primary">{name}</h2>
+        <p className="mt-4 italic text-secondary">{description}</p>
       </section>
-      <section className="mt-8">
-        <h3 className="text-xl font-bold">Our Mission</h3>
-        <p className="mt-2">{mission}</p>
+      <section className="mt-8 bg-accent bg-opacity-80 rounded-md p-2">
+        <h3 className="text-xl font-bold text-primary">Our Mission</h3>
+        <p className="mt-2 italic text-secondary">{mission}</p>
       </section>
-      <section className="mt-8">
-        <h3 className="text-xl font-bold">Our Vision</h3>
-        <p className="mt-2">{vision}</p>
+      <section className="mt-8 bg-accent bg-opacity-80 rounded-md p-2">
+        <h3 className="text-xl font-bold text-primary">Our Vision</h3>
+        <p className="mt-2 italic text-secondary ">{vision}</p>
       </section>
+       </div>
     </div>
+   
   );
 };
 

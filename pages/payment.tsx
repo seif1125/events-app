@@ -35,11 +35,11 @@ function CheckoutForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <h2 className="text-xl font-bold">Event: {name}</h2>
-      <p>Date: {date}</p>
-      <p>Time: {time}</p>
-      <p>Location: {location}</p>
-      <p>Price: {price}</p>
+      <h2 className="text-xl font-bold text-primary">Event: {name}</h2>
+      <p className="text-secondary">Date: {date}</p>
+      <p className="text-secondary">Time: {time}</p>
+      <p className="text-secondary">Location: {location}</p>
+      <p className="text-secondary">Price: {price}</p>
 
       <CardElement
         options={{
@@ -52,22 +52,26 @@ function CheckoutForm() {
       <button
         type="submit"
         disabled={!stripe || isProcessing}
-        className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 disabled:bg-gray-300"
+        className="bg-primary text-accent px-6 py-2 rounded hover:bg-blue-600 disabled:bg-gray-300"
       >
         {isProcessing ? "Processing..." : "Pay Now"}
       </button>
-      {message && <p className="mt-4 text-green-500">{message}</p>}
+      {message && <p className="mt-4 text-primary">{message}</p>}
     </form>
   );
 }
 
 export default function PaymentDemo() {
   return (
-    <div className="container mx-auto mt-8">
-      <h1 className="text-3xl font-bold mb-4">Payment Page</h1>
+    <div className="bg-[url('/background.webp')] bg-fixed overflow-hidden  bg-cover bg-center bg-no-repeat pt-2 pb-4">
+    <div className="w-full h-[75%] overflow-y-hidden flex flex-col justify-center mx-auto max-w-xl bg-accent bg-opacity-90 p-8 rounded-md">
+      
+     
       <Elements stripe={stripePromise}>
         <CheckoutForm />
       </Elements>
+     
+    </div>
     </div>
   );
 }

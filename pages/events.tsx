@@ -26,8 +26,8 @@ const Events: React.FC<EventsProps> = ({ events }) => {
   }
 
   return (
-    <div className="container mx-auto mt-8">
-      <h1 className="text-2xl font-bold">Upcoming Events</h1>
+    <div className="container mx-auto mt-8 p-8">
+      <h1 className="text-2xl font-bold text-accent ">Upcoming Events</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         {events.map((event) => (
           <EventCard key={event.id} event={event} />

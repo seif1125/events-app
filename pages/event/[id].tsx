@@ -47,32 +47,36 @@ export default function EventDetails() {
   };
 
   return (
-    <div className="container mx-auto mt-8 max-w-3xl">
+    <div className="bg-[url('/background.webp')] bg-fixed  bg-cover bg-center bg-no-repeat pt-2 pb-4">
+    <div className="container bg-accent flex flex-col items-center justify-center h-full pb-4  rounded-md mx-auto p-4  max-w-3xl">
       {/* Event Image */}
       <img
         src={event.image_url}
         alt={event.name}
-        className="w-full h-60 object-cover rounded-lg"
+        className="w-full h-40 object-cover rounded-lg"
       />
 
       {/* Event Details */}
       <div className="mt-4">
-        <h1 className="text-3xl font-bold">{event.name}</h1>
-        <p className="text-gray-600">{event.category}</p>
+        <h1 className="text-3xl font-bold text-secondary">{event.name}</h1>
+        <p className="text-primary">{event.category}</p>
 
         {/* Event Information */}
-        <p className="text-gray-800 mt-2">
+        <div className="flex flex-col md:!flex-row md:mt-0 justify-between mt-4">
+        <p className="text-secondary mt-2">
           <strong>Date:</strong> {event.date}
         </p>
-        <p className="text-gray-800">
+        <p className="text-secondary">
           <strong>Time:</strong> {event.time}
         </p>
-        <p className="text-gray-800">
+        </div>
+        <div className="flex flex-col md:!flex-row md:mt-0   justify-between mt-4">
+        <p className="text-secondary">
           <strong>Location:</strong> {event.location}
         </p>
-        <p className="text-gray-800">
+        <p className="text-secondary">
           <strong>Price:</strong> {event.price}
-        </p>
+        </p></div>
 
         {/* Availability */}
         {event.tickets_available ? (
@@ -82,21 +86,22 @@ export default function EventDetails() {
         )}
 
         {/* Event Description */}
-        <p className="text-gray-600 mt-4 line-clamp-3">{event.description}</p>
+        <p className="text-secondary mt-4 line-clamp-3">{event.description}</p>
 
         {/* Reserve Button */}
         <button
           onClick={handleNavigateToPayment}
           className={`${
             event.tickets_available
-              ? "bg-blue-500 hover:bg-blue-600"
+              ? "bg-primary text-accent"
               : "bg-gray-500 cursor-not-allowed"
-          } text-white px-4 py-2 rounded mt-4`}
+          } text-white px-4 py-2 rounded mt-4 shadow-md`}
           disabled={!event.tickets_available}
         >
           {event.tickets_available ? "Reserve Tickets" : "Unavailable"}
         </button>
       </div>
+    </div>
     </div>
   );
 }
