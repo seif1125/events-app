@@ -3,7 +3,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useState } from "react";
 
-const stripePromise = loadStripe("pk_test_51Qhr39HCMdJy5dnakfyahonBq0IZCxESIs8ypKINiXR72I9nAmSRwi5wTa6flAmbPfpWvmZ9KkrKiyq5zKgZCxNt00BnHwR3jN");
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY || "");
 
 function CheckoutForm() {
   const stripe = useStripe();
@@ -63,8 +63,8 @@ function CheckoutForm() {
 
 export default function PaymentDemo() {
   return (
-    <div className="bg-[url('/background.webp')] bg-fixed overflow-hidden  bg-cover bg-center bg-no-repeat pt-2 pb-4">
-    <div className="w-full h-[75%] overflow-y-hidden flex flex-col justify-center mx-auto max-w-xl bg-accent bg-opacity-90 p-8 rounded-md">
+    <div className="bg-[url('/background.webp')] h-full bg-fixed overflow-hidden  bg-cover bg-center bg-no-repeat pt-2 pb-4">
+    <div className="w-full   overflow-y-hidden flex flex-col justify-center mx-auto max-w-xl bg-accent bg-opacity-90 p-8 rounded-md">
       
      
       <Elements stripe={stripePromise}>

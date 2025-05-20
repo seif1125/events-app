@@ -18,7 +18,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Navbar />
 
       {/* Main content */}
-      <main className="flex-1 mt-0  mx-auto w-full overflow-hidden ">{children}</main>
+      <main className="flex-1 mt-0  mx-auto w-full h-screen overflow-x-hidden ">{children}</main>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-4 text-center">

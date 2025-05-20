@@ -22,7 +22,7 @@ export default function EventDetails() {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://6787b050c4a42c916107d6d9.mockapi.io/events?id=${id}`)
+      fetch(`https://${process.env.NEXT_PUBLIC_API_BASE_URL}/events?id=${id}`)
         .then((res) => res.json())
         .then((data) => {
           setEvent(data[0]); // Assuming data is an array with one object
@@ -47,7 +47,7 @@ export default function EventDetails() {
   };
 
   return (
-    <div className="bg-[url('/background.webp')] bg-fixed  bg-cover bg-center bg-no-repeat pt-2 pb-4">
+    <div className="bg-[url('/background.webp')] h-full bg-fixed  bg-cover bg-center bg-no-repeat pt-2 pb-4">
     <div className="container bg-accent flex flex-col items-center justify-center h-full pb-4  rounded-md mx-auto p-4  max-w-3xl">
       {/* Event Image */}
       <img

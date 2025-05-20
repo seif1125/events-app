@@ -13,7 +13,7 @@ const About: React.FC<AboutProps> = ({ companyInfo }) => {
   const { name, description, mission, vision } = companyInfo;
 
   return (
-    <div className="bg-[url('/background.webp')] bg-fixed bg-cover bg-center bg-no-repeat w-screen h-screen block ">
+    <div className="bg-[url('/background.webp')] bg-fixed bg-cover h-full  bg-center bg-no-repeat w-screen overflow-hidden block ">
       <div className="container  mx-auto flex flex-col justify-center bg-[#1f293742] h-full  p-8 ">
       <h1 className="text-3xl font-bold bg-accent p-2 text-primary">About Us</h1>
       <section className="mt-6 bg-accent bg-opacity-80 rounded-md p-2">

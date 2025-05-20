@@ -14,7 +14,7 @@ export default function Home() {
   
         
        
-        <div className="bg-[url('/background.webp')] bg-fixed  bg-cover bg-center bg-no-repeatcontainer mx-auto flex flex-col justify-center items-center">
+        <div className="bg-[url('/background.webp')] bg-fixed h-full overflow-hidden bg-cover bg-center bg-no-repeat container mx-auto flex flex-col justify-center items-center">
         <h1 className="text-4xl md:text-6xl font-bold">Welcome to Events Hub</h1>
         <p className="mt-4 text-lg md:text-xl">
           Discover amazing events in the UAE and reserve your tickets effortlessly.
