@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
     <nav className="bg-gray-800 text-white p-4 w-full overflow-y-hidden overflow-x-hidden">
       <div className="container mx-auto flex justify-between items-center">
         <Link className="flex flex-row-reverse items-center" href="/">
-          <span className="text-xl font-bold ml-2 text-primary">Events Hub</span>
+          <span className="text-xl font-bold ml-2 text-primary hidden md:block">Events Hub</span>
           <Image src="/logo.png" alt="Logo" width={50} height={50} className="ml-2" />
         </Link>
         <div className="flex space-x-4">

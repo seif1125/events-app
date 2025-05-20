@@ -63,8 +63,8 @@ function CheckoutForm() {
 
 export default function PaymentDemo() {
   return (
-    <div className="bg-[url('/background.webp')] h-full bg-fixed overflow-hidden  bg-cover bg-center bg-no-repeat pt-2 pb-4">
-    <div className="w-full   overflow-y-hidden flex flex-col justify-center mx-auto max-w-xl bg-accent bg-opacity-90 p-8 rounded-md">
+    <div className="bg-[url('/background.webp')] h-full bg-fixed overflow-hidden  bg-cover bg-center bg-no-repeat pt-2 pb-4 flex justify-center items-center">
+    <div className="md:w-full overflow-y-hidden flex flex-col justify-center w-3/4 mx-auto max-w-xl bg-accent bg-opacity-90 p-8 rounded-md">
       
      
       <Elements stripe={stripePromise}>

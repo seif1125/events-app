@@ -47,8 +47,8 @@ export default function EventDetails() {
   };
 
   return (
-    <div className="bg-[url('/background.webp')] h-full bg-fixed  bg-cover bg-center bg-no-repeat pt-2 pb-4">
-    <div className="container bg-accent flex flex-col items-center justify-center h-full pb-4  rounded-md mx-auto p-4  max-w-3xl">
+    <div className="bg-[url('/background.webp')] h-full bg-fixed  bg-cover bg-center bg-no-repeat pt-2 pb-4 flex items-center justify-center">
+    <div className="container bg-accent flex flex-col items-center justify-center h-auto md:h-full pb-4 w-3/4  rounded-md mx-auto p-4  max-w-3xl">
       {/* Event Image */}
       <img
         src={event.image_url}
